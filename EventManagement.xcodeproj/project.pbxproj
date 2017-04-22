@@ -14,6 +14,10 @@
 		34483F2B1EAB3DA900FC8C70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34483F291EAB3DA900FC8C70 /* LaunchScreen.storyboard */; };
 		34483F361EAB3DA900FC8C70 /* EventManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34483F351EAB3DA900FC8C70 /* EventManagementTests.swift */; };
 		34483F411EAB3DA900FC8C70 /* EventManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34483F401EAB3DA900FC8C70 /* EventManagementUITests.swift */; };
+		34483F541EAB44B300FC8C70 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34483F531EAB44B300FC8C70 /* Event.swift */; };
+		34483F561EAB472300FC8C70 /* DayEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34483F551EAB472300FC8C70 /* DayEvent.swift */; };
+		34483F581EAB558D00FC8C70 /* EventUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34483F571EAB558D00FC8C70 /* EventUITableViewController.swift */; };
+		34483F5A1EAB5A7B00FC8C70 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34483F591EAB5A7B00FC8C70 /* EventTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		34483F3C1EAB3DA900FC8C70 /* EventManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34483F401EAB3DA900FC8C70 /* EventManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManagementUITests.swift; sourceTree = "<group>"; };
 		34483F421EAB3DA900FC8C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34483F531EAB44B300FC8C70 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		34483F551EAB472300FC8C70 /* DayEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayEvent.swift; sourceTree = "<group>"; };
+		34483F571EAB558D00FC8C70 /* EventUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventUITableViewController.swift; sourceTree = "<group>"; };
+		34483F591EAB5A7B00FC8C70 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,15 @@
 		34483F1F1EAB3DA900FC8C70 /* EventManagement */ = {
 			isa = PBXGroup;
 			children = (
+				34483F4E1EAB3DC700FC8C70 /* Model */,
 				34483F201EAB3DA900FC8C70 /* AppDelegate.swift */,
 				34483F221EAB3DA900FC8C70 /* ViewController.swift */,
 				34483F241EAB3DA900FC8C70 /* Main.storyboard */,
 				34483F271EAB3DA900FC8C70 /* Assets.xcassets */,
 				34483F291EAB3DA900FC8C70 /* LaunchScreen.storyboard */,
 				34483F2C1EAB3DA900FC8C70 /* Info.plist */,
+				34483F571EAB558D00FC8C70 /* EventUITableViewController.swift */,
+				34483F591EAB5A7B00FC8C70 /* EventTableViewCell.swift */,
 			);
 			path = EventManagement;
 			sourceTree = "<group>";
@@ -123,6 +134,15 @@
 				34483F421EAB3DA900FC8C70 /* Info.plist */,
 			);
 			path = EventManagementUITests;
+			sourceTree = "<group>";
+		};
+		34483F4E1EAB3DC700FC8C70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34483F531EAB44B300FC8C70 /* Event.swift */,
+				34483F551EAB472300FC8C70 /* DayEvent.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34483F5A1EAB5A7B00FC8C70 /* EventTableViewCell.swift in Sources */,
+				34483F581EAB558D00FC8C70 /* EventUITableViewController.swift in Sources */,
 				34483F231EAB3DA900FC8C70 /* ViewController.swift in Sources */,
+				34483F561EAB472300FC8C70 /* DayEvent.swift in Sources */,
+				34483F541EAB44B300FC8C70 /* Event.swift in Sources */,
 				34483F211EAB3DA900FC8C70 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

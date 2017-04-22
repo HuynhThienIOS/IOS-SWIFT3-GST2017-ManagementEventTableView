@@ -10,6 +10,12 @@ import UIKit
 
 class EventUITableViewController: UITableViewController {
 
+   
+    // MARK: - Data Source
+    var dayEvents: [DayEvent] = {
+        return DayEvent.dayEvents()
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,28 +30,37 @@ class EventUITableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let dayEvent = dayEvents[section]
+        return dayEvent.day
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return dayEvents.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        let dayEvent = dayEvents[section]
+        return dayEvent.events.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Event Cell", for: indexPath) as! EventTableViewCell
+        
+        let dayEvent = dayEvents[indexPath.section]
+        let event = dayEvent.events[indexPath.row]
+        
+        cell.labelTitle?.text = event.title
+        cell.labelContent?.text = event.content
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
