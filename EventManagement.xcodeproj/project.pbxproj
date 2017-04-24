@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275D21391EADB89E00378334 /* EventDetailUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275D21381EADB89E00378334 /* EventDetailUIViewController.swift */; };
 		34483F211EAB3DA900FC8C70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34483F201EAB3DA900FC8C70 /* AppDelegate.swift */; };
 		34483F231EAB3DA900FC8C70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34483F221EAB3DA900FC8C70 /* ViewController.swift */; };
 		34483F261EAB3DA900FC8C70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34483F241EAB3DA900FC8C70 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		275D21381EADB89E00378334 /* EventDetailUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailUIViewController.swift; sourceTree = "<group>"; };
 		34483F1D1EAB3DA900FC8C70 /* EventManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34483F201EAB3DA900FC8C70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34483F221EAB3DA900FC8C70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275D213A1EADBA3800378334 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				34483F221EAB3DA900FC8C70 /* ViewController.swift */,
+				34483F571EAB558D00FC8C70 /* EventUITableViewController.swift */,
+				34483F591EAB5A7B00FC8C70 /* EventTableViewCell.swift */,
+				275D21381EADB89E00378334 /* EventDetailUIViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		34483F141EAB3DA900FC8C70 = {
 			isa = PBXGroup;
 			children = (
@@ -105,15 +118,13 @@
 		34483F1F1EAB3DA900FC8C70 /* EventManagement */ = {
 			isa = PBXGroup;
 			children = (
+				275D213A1EADBA3800378334 /* Controllers */,
 				34483F4E1EAB3DC700FC8C70 /* Model */,
 				34483F201EAB3DA900FC8C70 /* AppDelegate.swift */,
-				34483F221EAB3DA900FC8C70 /* ViewController.swift */,
 				34483F241EAB3DA900FC8C70 /* Main.storyboard */,
 				34483F271EAB3DA900FC8C70 /* Assets.xcassets */,
 				34483F291EAB3DA900FC8C70 /* LaunchScreen.storyboard */,
 				34483F2C1EAB3DA900FC8C70 /* Info.plist */,
-				34483F571EAB558D00FC8C70 /* EventUITableViewController.swift */,
-				34483F591EAB5A7B00FC8C70 /* EventTableViewCell.swift */,
 			);
 			path = EventManagement;
 			sourceTree = "<group>";
@@ -282,6 +293,7 @@
 				34483F5A1EAB5A7B00FC8C70 /* EventTableViewCell.swift in Sources */,
 				34483F581EAB558D00FC8C70 /* EventUITableViewController.swift in Sources */,
 				34483F231EAB3DA900FC8C70 /* ViewController.swift in Sources */,
+				275D21391EADB89E00378334 /* EventDetailUIViewController.swift in Sources */,
 				34483F561EAB472300FC8C70 /* DayEvent.swift in Sources */,
 				34483F541EAB44B300FC8C70 /* Event.swift in Sources */,
 				34483F211EAB3DA900FC8C70 /* AppDelegate.swift in Sources */,
@@ -531,6 +543,7 @@
 				34483F471EAB3DA900FC8C70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34483F481EAB3DA900FC8C70 /* Build configuration list for PBXNativeTarget "EventManagementTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +552,7 @@
 				34483F4A1EAB3DA900FC8C70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34483F4B1EAB3DA900FC8C70 /* Build configuration list for PBXNativeTarget "EventManagementUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +561,7 @@
 				34483F4D1EAB3DA900FC8C70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

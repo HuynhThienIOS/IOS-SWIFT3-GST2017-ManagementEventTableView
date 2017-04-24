@@ -53,6 +53,7 @@
                                 <connections>
                                     <outlet property="labelContent" destination="GXP-Py-hv9" id="s30-Eu-ObL"/>
                                     <outlet property="labelTitle" destination="Cfv-LE-Lef" id="BAB-t6-JBQ"/>
+                                    <segue destination="mEL-pG-H5R" kind="show" identifier="Show Detail" id="wdP-i9-Zfo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -66,6 +67,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--Event DetailUI View Controller-->
+        <scene sceneID="0zR-8p-ucL">
+            <objects>
+                <viewController id="mEL-pG-H5R" customClass="EventDetailUIViewController" customModule="EventManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W9Q-aY-wrN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Of7-PP-oQc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mba-cE-wLk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gu-HT-D6t">
+                                <rect key="frame" x="15" y="79" width="345" height="111"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TextView content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="njO-r0-KNi">
+                                <rect key="frame" x="15" y="200" width="345" height="447"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="njO-r0-KNi" firstAttribute="leading" secondItem="mba-cE-wLk" secondAttribute="leading" constant="15" id="AVq-K7-7AQ"/>
+                            <constraint firstAttribute="bottom" secondItem="njO-r0-KNi" secondAttribute="bottom" constant="20" id="LA5-Qt-c3i"/>
+                            <constraint firstItem="0gu-HT-D6t" firstAttribute="leading" secondItem="mba-cE-wLk" secondAttribute="leading" constant="15" id="YsV-WF-laX"/>
+                            <constraint firstItem="0gu-HT-D6t" firstAttribute="height" secondItem="mba-cE-wLk" secondAttribute="height" multiplier="1/6" id="fN9-qW-hRQ"/>
+                            <constraint firstAttribute="trailing" secondItem="0gu-HT-D6t" secondAttribute="trailing" constant="15" id="hZT-cx-5nW"/>
+                            <constraint firstItem="njO-r0-KNi" firstAttribute="top" secondItem="0gu-HT-D6t" secondAttribute="bottom" constant="10" id="hu5-uh-1hC"/>
+                            <constraint firstAttribute="trailing" secondItem="njO-r0-KNi" secondAttribute="trailing" constant="15" id="wMI-gn-3et"/>
+                            <constraint firstItem="0gu-HT-D6t" firstAttribute="top" secondItem="W9Q-aY-wrN" secondAttribute="bottom" constant="15" id="z8g-BY-o4f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelTitleEvent" destination="0gu-HT-D6t" id="5By-Gf-GpW"/>
+                        <outlet property="textViewEventContent" destination="njO-r0-KNi" id="uqo-iD-RtN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KgF-k1-EJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qqs-FF-UAR">
