@@ -13,13 +13,16 @@ class EventDetailUIViewController: UIViewController {
     @IBOutlet weak var labelTitleEvent: UILabel!
     @IBOutlet weak var textViewEventContent: UITextView!
     var event: Event?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelTitleEvent.text = event?.title
-        textViewEventContent.text = event?.content
         
+        showEventDetail()
     }
 
-    
+    func showEventDetail() {
+        labelTitleEvent.text = event?.title
+        textViewEventContent.text = event?.content
+    }
 
 }
