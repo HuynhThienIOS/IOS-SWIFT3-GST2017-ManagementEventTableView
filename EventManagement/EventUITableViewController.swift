@@ -10,11 +10,15 @@ import UIKit
 
 class EventUITableViewController: UITableViewController {
 
-   
+    
     // MARK: - Data Source
     var dayEvents: [DayEvent] = {
         return DayEvent.dayEvents()
     }()
+    
+  
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +36,7 @@ class EventUITableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
         let dayEvent = dayEvents[section]
         return dayEvent.day
     }
@@ -43,6 +48,7 @@ class EventUITableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         // #warning Incomplete implementation, return the number of rows
         let dayEvent = dayEvents[section]
         return dayEvent.events.count
@@ -50,8 +56,8 @@ class EventUITableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Event Cell", for: indexPath) as! EventTableViewCell
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Event Cell", for: indexPath) as! EventTableViewCell
         let dayEvent = dayEvents[indexPath.section]
         let event = dayEvent.events[indexPath.row]
         
@@ -63,13 +69,17 @@ class EventUITableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if let identifier = segue.identifier {
+            
             switch identifier {
             case "Show Detail":
+                
                 let eventDetail = segue.destination as! EventDetailUIViewController
                 if let indexPath = self.tableView.indexPath(for: sender as! EventTableViewCell) {
                     eventDetail.event = eventAtIndexPath(indexPath: indexPath as NSIndexPath)
                 }
+            
             default:
                 break
             }
@@ -78,6 +88,7 @@ class EventUITableViewController: UITableViewController {
     
     // MARK: - Delete
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
             self.dayEvents[indexPath.section].events.remove(at: indexPath.row)
             self.tableView.reloadData()
@@ -87,6 +98,7 @@ class EventUITableViewController: UITableViewController {
     
     // MARK: - Get event method
     func eventAtIndexPath(indexPath: NSIndexPath) -> Event {
+        
         let dayEvent = dayEvents[indexPath.section]
         return dayEvent.events[indexPath.row]
     }
@@ -106,12 +118,13 @@ class EventUITableViewController: UITableViewController {
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         
-        let event = dayEvents[fromIndexPath.section].events[fromIndexPath.row]
+        let event = eventAtIndexPath(indexPath: fromIndexPath as NSIndexPath)
         dayEvents[fromIndexPath.section].events.remove(at: fromIndexPath.row)
         
         if fromIndexPath.section == to.section {
             dayEvents[fromIndexPath.section].events.insert(event, at: to.row)
-        }else {
+        }
+        else {
             dayEvents[to.section].events.insert(event, at: to.row)
         }
        
@@ -137,3 +150,5 @@ class EventUITableViewController: UITableViewController {
     */
 
 }
+
+

@@ -8,11 +8,6 @@
 
 import Foundation
 
-public enum EventStatus {
-    case Uncompleted
-    case Completed
-}
-
 class Event {
     var title: String
     var content: String

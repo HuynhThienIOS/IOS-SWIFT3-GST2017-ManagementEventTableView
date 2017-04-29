@@ -22,6 +22,7 @@ class DayEvent {
     class func dayEvents() -> [DayEvent] {
         return [self.monday(), self.tuesday(), self.wednesday(), self.thursday(), self.friday(), self.saturday(), self.sunday()]
     }
+    
     // Private methods
     
     private class func monday() -> DayEvent {
